@@ -26,7 +26,7 @@ from tg_bot.modules.translations.strings import tld
 
 
 PM_START_TEXT = """
-Hello [Julia](https://telegra.ph/file/285b9823cbe63c6826e2a.jpg), My Name is {} !
+Hello [MIAKHALIFA](https://telegra.ph/file/b4f87176efb4b082866c6.jpg), My Name is {} !
 I'm a powerful group management bot 🤖
 👉Add me to your groups as admin to manage your groups with my commands🤩
 You can find my list of available commands with /help .
@@ -135,10 +135,10 @@ def start(bot: Bot, update: Update, args: List[str]):
             chat = update.effective_chat  # type: Optional[Chat]
             text = PM_START_TEXT
     
-            keyboard = [[InlineKeyboardButton(text=tld(chat.id, "Add Me To Your Group ♥️"), url="t.me/MissJuliaBot?startgroup=true")]]
+            keyboard = [[InlineKeyboardButton(text=tld(chat.id, "Add Me To Your Group ♥️"), url="t.me/missmiakhalifabot?startgroup=true")]]
             keyboard += [[InlineKeyboardButton(text="My Super Commands ⚙️", callback_data="help_back")]]
-            keyboard += [[InlineKeyboardButton(text=tld(chat.id, "🌍 Support Chat 🌍"), url="https://t.me/JuliaUpdatesChat")]]
-            keyboard += [[InlineKeyboardButton(text=tld(chat.id, "Basic Commands👀"), url="https://t.me/JuliaUpdates/25")]]
+            keyboard += [[InlineKeyboardButton(text=tld(chat.id, "🌍 Support Chat 🌍"), url="https://t.me/miakhalifachatgroup")]]
+            keyboard += [[InlineKeyboardButton(text=tld(chat.id, "Basic Commands👀"), url="https://t.me/CheemsUserbot")]]
     
             update.effective_message.reply_text(PM_START_TEXT.format(escape_markdown(first_name), bot.first_name), reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=False, parse_mode=ParseMode.MARKDOWN)
 
